@@ -3,9 +3,12 @@ package com.vinicius.microservices.order_service.infrastructure.persistence;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.springframework.stereotype.Repository;
+
 import com.vinicius.microservices.order_service.domain.model.Order;
 import com.vinicius.microservices.order_service.domain.repository.OrderRepository;
 
+@Repository
 public class JpaOrderRepository implements OrderRepository {
 
 	private final SpringDataOrderRepository springRepository;

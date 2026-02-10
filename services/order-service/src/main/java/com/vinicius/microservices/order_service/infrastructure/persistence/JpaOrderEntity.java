@@ -4,12 +4,14 @@ import java.time.Instant;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "orders")
 public class JpaOrderEntity {
 
+	@Id
 	private UUID id;
 	private UUID userId;
 	private Instant createdAt;
